@@ -1,0 +1,55 @@
+/*
+Style index.html
+*/
+
+.center{
+        text-align: center; 
+}
+.justify{
+        text-align: justify;
+}
+
+.container  { 
+        display: flex; 
+        flex-flow: row; 
+        justify-content: center;
+        text-align: center;
+}
+
+#menu  li{
+        display: inline;
+        padding: 15px;   
+        font-size: medium;
+        font-family: "Lucida Console", "Courier New", monospace;      
+}
+#menu > li > a{
+        text-decoration: none;
+        color: black;
+}   
+#menu > li > a:hover{
+        color: rgb(110, 88, 88);
+}    
+.p-30  {
+        padding: 30px; 
+}
+
+.br-50{ border-radius: 11%;
+}
+
+.wh{
+       width: 350px;  height: 500px;
+}
+.tm-social{
+     width:35px ;   
+     height:35px ;
+     padding: 25px;
+}
+.mb-50{margin-bottom: 50px;
+
+}
+.mb-50{
+        margin-left: 50px;
+}
+
+
+/* Style contato.html */

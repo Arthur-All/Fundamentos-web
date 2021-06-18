@@ -5,49 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <ul>
-      
-        <li> <a href = "index.html"> Home </a> </li>
+    <ul id="menu">
+        <li><a href = "index.html"> Home </a> </li>
         <li><a href = contato.html> Contato </a></li>
-        
     </ul>
    
-    <h2> Meus meio de contato </h2>
-   
-    <p>
-      Você pode estar entrando em contato comigo por meio do<a href="https://www.linkedin.com/in/arthur-r-allen/"> Linkedin,</a>
-        por la irei lhe respondendo o mais rapido o possivel.  
-    </p>
-    
-    <p>
-   <li>Você tambem pode acompanhar meu projetos no<a href="https://github.com/Arthur-All"> GitHub</a></li>
-    </p>
-    
-    <form>
-        <label for="nome">Nome: </label><br>
-        <input type= "text" id="nome"> 
-        <br>
-        <br>
-        <label for="email">Email: </label> <br>
-        <input type="email" id="email"> 
-        <br>
-        <br>
-        <label for="assunto">Assunto: </label><br>
-        <textarea name="assunto" id="assunto" cols="60"  rows="8"> </textarea>
-        <br>
-        
-        <button>Enviar</button>
-    </form>
 
-    <h2>Endereço: </h2>
-    <p>R. Cantagalo,São Paulo - SP</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29259.822554133134!2d-46.56889310147892!3d-23.551276599466906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e930697fda9%3A0x645aca57d81aaa55!2sHACKMED!5e0!3m2!1spt-PT!2sbr!4v1623863169473!5m2!1spt-PT!2sbr"
-    width="450"
-    height="250" 
-    style="border:0;"
-    allowfullscreen="" 
-    loading="lazy"></iframe>
+    <div class="container mb-50">
+        <div>
+            <form>
+                <h2>Entre em contato</h2>
+                <label for="nome">Nome: </label><br>
+                <input type= "text" id="nome" onkeyup='validaNome()'> 
+                <div id="txtNome"> </div>
+
+                <br>
+
+                <label for="email">Email: </label> <br>
+                <input type="email" id="email" onkeyup='validaEmail()'> 
+                <div id="txtEmail"> </div>
+                <br>
+
+                <label for="assunto">Assunto: </label><br>
+                <textarea name="assunto" id="assunto" cols="60" rows="8" onkeyup="validaAssunto()"></textarea>
+                <div id='txtAssunto'></div>
+                
+                <br>
+                <button class="container" onclick='enviar()'>Enviar</button>
+            </form>
+        </div>
+        
+        <div class="mb-50">
+            
+            <p>R. Cantagalo,São Paulo - SP</p>
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29259.822554133134!2d-46.56889310147892!3d-23.551276599466906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e930697fda9%3A0x645aca57d81aaa55!2sHACKMED!5e0!3m2!1spt-PT!2sbr!4v1623863169473!5m2!1spt-PT!2sbr"
+            width="450"
+            height="250" 
+            style="border:0;"
+            allowfullscreen="" 
+            loading="lazy" onmousemove='mapaZoom()' onmouseout='mapaNormal()' id='mapa'></iframe>
+        </div>
+        
+    </div>
+
+    <hr>
+    <footer >
+        <div class="container">
+            <a href="https://www.linkedin.com/in/arthur-r-allen/">
+                <img class="tm-social " src="assets/img/linkedin.gif" alt="logo animada linkedin" >
+            </a>
+            <a href="https://twitter.com/ArthurAll5">
+                <img class="tm-social " src="assets/img/twit.gif" alt="logo animada twit">
+            </a>
+        </div>
+      
+        <p class="center">Felipe Quebra Codigos &copy; </p>
+        
+    </footer>    
+    
+    <script src="assets/js/script.js"></script>
+   
 </body>
 </html>
