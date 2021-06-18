@@ -13,40 +13,31 @@
         <li><a href = contato.html> Contato </a></li>
     </ul>
    
-    <h2 class="center"> Meus meio de contato </h2>
-    
-    
 
-  
-    <p>
-      Você pode estar entrando em contato comigo por meio do<a href="https://www.linkedin.com/in/arthur-r-allen/" target = "_blank"> Linkedin,</a>
-        por la irei lhe respondendo o mais rapido o possivel.  
-    </p>
-    
-    <p>
-   <li>Você tambem pode acompanhar meu projetos no<a href="https://github.com/Arthur-All"> GitHub</a></li>
-    </p>
-    
-    
     <div class="container mb-50">
         <div>
             <form>
                 <h2>Entre em contato</h2>
                 <label for="nome">Nome: </label><br>
-                <input type= "text" id="nome"> 
+                <input type= "text" id="nome" onkeyup='validaNome()'> 
+                <div id="txtNome"> </div>
+
                 <br>
-                <br>
+
                 <label for="email">Email: </label> <br>
-                <input type="email" id="email"> 
+                <input type="email" id="email" onkeyup='validaEmail()'> 
+                <div id="txtEmail"> </div>
                 <br>
-                <br>
+
                 <label for="assunto">Assunto: </label><br>
-                <textarea name="assunto" id="assunto" cols="60"  rows="8"> </textarea>
-                <br>
+                <textarea name="assunto" id="assunto" cols="60" rows="8" onkeyup="validaAssunto()"></textarea>
+                <div id='txtAssunto'></div>
                 
-                <button>Enviar</button>
+                <br>
+                <button class="container" onclick='enviar()'>Enviar</button>
             </form>
         </div>
+        
         <div class="mb-50">
             
             <p>R. Cantagalo,São Paulo - SP</p>
@@ -55,7 +46,7 @@
             height="250" 
             style="border:0;"
             allowfullscreen="" 
-            loading="lazy"></iframe>
+            loading="lazy" onmousemove='mapaZoom()' onmouseout='mapaNormal()' id='mapa'></iframe>
         </div>
         
     </div>
@@ -69,15 +60,13 @@
             <a href="https://twitter.com/ArthurAll5">
                 <img class="tm-social " src="assets/img/twit.gif" alt="logo animada twit">
             </a>
-           
-           
         </div>
-        
-       
+      
         <p class="center">Felipe Quebra Codigos &copy; </p>
         
     </footer>    
     
+    <script src="assets/js/script.js"></script>
    
 </body>
 </html>
